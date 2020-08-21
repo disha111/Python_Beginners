@@ -1,0 +1,3 @@
+refFile = open("file/words.txt")
+print(refFile.read().upper())
+refFile.close()

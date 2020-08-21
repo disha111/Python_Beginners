@@ -1,0 +1,24 @@
+.  - Any character Except New Line
+\d - Digits (0-9)
+\D - Not a Digit (except 0-9)
+\w - Word Character (a-z, A-Z, 0-9, _)
+\W - Not a word Character
+\s - Whitespace (space, tab, newline)
+\S - Not Whitespace (space, tab, newline)
+
+^    - Beginning of a string
+$    - Ending of a string
+[]   - Matches Characters in brackets
+[^ ] - Matches Characters NOT in
+
+Quantifiers:
+
+* - 0 or More
++ - 1 or More
+? - 0 or One
+{3} - Exact Number
+{3,4} - Range of Numbers (Minumum, Maximum)
+
+Grouping:
+|   - Either or
+( ) - Group
