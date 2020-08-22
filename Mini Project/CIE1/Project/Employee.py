@@ -1,4 +1,5 @@
 #1
+from validation import Validation
 from PermanentEmployee import Per_Emp
 from connect import myconnect
 class Employee:
@@ -11,7 +12,12 @@ class Employee:
       def __init__(self):
             self._empname = input("enter name: ")
             self._empemail=input("enter email: ")
+            e = Validation()
+            if(e.validateemail(self._empemail) == False):
+                  exit(0)
             self._empmob=input("enter mobile no: ")
+            if(e.validatemobile(self._empmob) == False):
+                  exit(0)
             self._emptype = input("enter type: ")
             self._empexp = int(input("enter experience: "))
             self._empsalary = self.getsalary()
