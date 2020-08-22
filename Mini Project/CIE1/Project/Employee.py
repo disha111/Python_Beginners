@@ -13,9 +13,8 @@ class Employee:
             self._empemail=input("enter email: ")
             self._empmob=input("enter mobile no: ")
             self._emptype = input("enter type: ")
-            self._empexp = int(input("enter experience"))
+            self._empexp = int(input("enter experience: "))
             self._empsalary = self.getsalary()
-            print(self._empsalary)
             
       def getsalary(self):
             if self._emptype=="P" or self._emptype=="p":
@@ -25,20 +24,28 @@ class Employee:
                   print("Invalid Employee. Please enter only 'p' or 'P'")
                   
       #3
+      @staticmethod
+      def addnote():
+            note = input("Enter Your Notes Here \n")
+            fopen = open("notes.txt","a")
+            fopen.write("\n")
+            fopen.write(note)
+            fopen.close()
+
                   
 print("1. Add Emp")
 print("2. Display Emp")
 print("3. Add Notes")
 choice = int(input("Enter your Choice:"))
-# if choice == 1:
-#       c = Employee()
-#       obj = myconnect()
-#       obj.savetodb(c._empname,c._empemail,c._empmob,c._emptype,c._empexp,c._empsalary)
-# elif choice==2:
-#       obj = myconnect()
-#       obj.display()
-# elif choice==3:
-#       Employee.addnote()
-# else:
-#       print("invalid choice")
+if choice == 1:
+      c = Employee()
+      obj = myconnect()
+      obj.savetodb(c._empname,c._empemail,c._empmob,c._emptype,c._empexp,c._empsalary)
+elif choice==2:
+      obj = myconnect()
+      obj.display()
+elif choice==3:
+      Employee.addnote()
+else:
+      print("invalid choice")
       
