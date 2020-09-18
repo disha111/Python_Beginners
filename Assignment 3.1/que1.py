@@ -10,3 +10,4 @@ class q1:
         print("List is :",self.ls)
         print("one-dimensional NumPy Array is :",self.array)
 q =q1()
+

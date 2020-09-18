@@ -1,7 +1,7 @@
 import re
 class Validation:
     def validateemail(self,email):
-        pattern = re.compile(r"[.A-Za-z0-9-]+@[A-Za-z.-]+[.A-Za-z0-9.-]")
+        pattern = re.compile(r"[.\w-]+@[\w.-]+[.\w.-]")
         if(pattern.match(email)):
             return email
         else:

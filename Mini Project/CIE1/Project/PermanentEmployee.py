@@ -1,5 +1,4 @@
 class Per_Emp:
-
       basic_salary = 5000
       def calculatesalary(self,exp):
             #2
@@ -12,4 +11,3 @@ class Per_Emp:
             else:
                   self.basic_salary = self.basic_salary
             return self.basic_salary
-            

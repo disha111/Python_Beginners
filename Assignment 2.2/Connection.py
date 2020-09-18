@@ -16,7 +16,7 @@ class Conn:
         self.con.close()
         
     def insert(self,e):
-        pattern = re.compile(r"[.A-Za-z0-9-]+@[A-Za-z.-]+[.A-Za-z0-9.-]")
+        pattern = re.compile(r"[.\w-]+@[\w.-]+[.\w.-]")
         if(pattern.search(e.email)):
             self.con = sqlite3.connect("Employee.db")
             self.con.execute("insert into employee values (?,?,?,?,?,?)",(e.name,e.email,e.m_no,e.type,e.salary,e.exp))

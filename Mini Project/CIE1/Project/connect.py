@@ -1,6 +1,5 @@
 import sqlite3
 class myconnect:
-      
       def __init__(self):
             #4
             self.conn = sqlite3.connect("emp.db")

@@ -3,12 +3,10 @@ from validation import Validation
 from PermanentEmployee import Per_Emp
 from connect import myconnect
 class Employee:
-      
       _empname=""
       _emptype=""
       _empemail=""
       _empsalary=""
-
       def __init__(self):
             self._empname = input("enter name: ")
             self._empemail=input("enter email: ")
@@ -28,7 +26,6 @@ class Employee:
                   return Opemp.calculatesalary(self._empexp)
             else:
                   print("Invalid Employee. Please enter only 'p' or 'P'")
-                  
       #3
       @staticmethod
       def addnote():
@@ -37,8 +34,6 @@ class Employee:
             fopen.write("\n")
             fopen.write(note)
             fopen.close()
-
-                  
 print("1. Add Emp")
 print("2. Display Emp")
 print("3. Add Notes")
@@ -54,4 +49,3 @@ elif choice==3:
       Employee.addnote()
 else:
       print("invalid choice")
-      
