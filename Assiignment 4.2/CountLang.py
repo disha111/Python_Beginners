@@ -1,16 +1,8 @@
+from collections import Counter 
 import pandas as pd
-from collections import Counter
-
-from pandas.core.algorithms import value_counts
 df = pd.read_csv('data.csv')
 lang = Counter()
-for i in df['LanguagesWorkedWith']:
-    # lang.update(i.split(';'))
-    lang.update(value_counts(i.split(';')))
-
+[lang.update(i.split(';')) for i in df['LanguagesWorkedWith']]
 lan,count =[],[]
-for i in lang.most_common(15):
-    lan.append(i[0])
-    count.append(i[1])
-Data = pd.DataFrame({'Language':lan,'Count':count})
-print(Data)
+[[lan.append(langC[0]),count.append(langC[1])]for langC in lang.most_common(len(lang))]
+print(pd.DataFrame({'Language':lan,'Count':count}))
