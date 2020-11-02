@@ -9,9 +9,7 @@ for line in file:
 print("List of All Url")
 for i in dom:
     print(i)
-
-p = re.compile(r"https?://+[-\w.]+(com|in|edu)")
-file = p.finditer(result)
+file = re.compile(r"https?://+[-\w.]+(com|in|edu)").finditer(result)
 dom=[]
 for line in file:
     dom.append(line)

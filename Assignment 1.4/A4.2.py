@@ -9,7 +9,6 @@ class A42:
             for n_word in words:
                 if n_word not in word:
                     word.append(n_word)
-        
         word.sort()
         print(word)
 if __name__ == "__main__":

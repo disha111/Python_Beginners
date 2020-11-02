@@ -5,6 +5,5 @@ for line in f:
     for n_word in words:
         if n_word not in word:
             word.append(n_word)
-        
 word.sort()
 print(word)

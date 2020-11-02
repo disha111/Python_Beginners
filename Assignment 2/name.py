@@ -6,7 +6,6 @@ file =  pattern.finditer(result)
 name=[]
 for line in file:
     name.append(line)
-    #print(line)
 for i in name:
     print(i)
 f.close()
